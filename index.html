@@ -2,38 +2,141 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Accesorios PC</title>
+    <title>Tienda TechZone</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-<div class="tienda-layout">
-    <header class="tienda-header">Tienda de Accesorios para PC</header>
-    <aside class="filtros">
-        <h3>Categorías</h3>
-        <ul>
-            <li>Mouses</li>
-            <li>Teclados</li>
-            <li>Monitores</li>
-            <li>Sillas</li>
-            <li>Audio</li>
-        </ul>0
-0        <h3>Precio</h3>  ]
-[¨[P]{o,miun ytbjhrvgecfdsaczx<}        <input type="range" min="0" max="1000">
-    </aside>
-    <main class="productos-grid grid-galeria">
-        <div class="producto destacada">
-            <img src="imagenes/mouse_gamer.jpg" alt="Mouse Gamer">
-            <p>Mouse Gamer RGB</p>
-        </div>
-        <div class="producto"><img src="imagenes/teclado.jpg" alt="Teclado"><p>Teclado Mecánico</p></div>
-        <div class="producto"><img src="imagenes/monitor.jpg" alt="Monitor"><p>Monitor 27"</p></div>
-        <div class="producto"><img src="imagenes/silla.jpg" alt="Silla"><p>Silla Ergonómica</p></div>
-        <div class="producto"><img src="imagenes/microfono.jpg" alt="Micrófono"><p>Micrófono Streaming</p></div>
-        <div class="producto"><img src="imagenes/camara.jpg" alt="Cámara"><p>Cámara Web HD</p></div>
-        <div class="producto"><img src="imagenes/audifonos.jpg" alt="Audífonos"><p>Audífonos Gamer</p></div>
-    </main>
-    <footer class="tienda-footer">© 2025 Tienda Accesorios PC</footer>
-</div>
+    <div class="tienda-layout">
+        <header class="tienda-header">
+            <div class="logo-nombre">
+                <img src="imagenes/logo.jpg" alt="Logo tienda" class="logo">
+                <h1>TechZone</h1>
+            </div>
+            <button class="modo-noche-btn" onclick="toggleModoOscuro()">🌙</button>
+        </header>
+
+        <aside class="filtros">
+            <h3>Categorías</h3>
+            <ul class="categorias">
+                <li><button>Monitores</button></li>
+                <li><button>Teclados</button></li>
+                <li><button>Ratones</button></li>
+                <li><button>Sillas</button></li>
+                <li><button>Audífonos</button></li>
+                <li><button>Micrófonos</button></li>
+                <li><button>Cámaras</button></li>
+            </ul>
+
+            <h3>Precio</h3>
+            <input type="range" min="0" max="200000" value="200000" id="precio">
+            <p id="valor-precio">$200.000</p>
+        </aside>
+
+        <main class="productos-grid">
+            <div class="grid-galeria">
+                <!-- Producto destacado -->
+                <div class="producto destacada">
+                    <div class="imagen-hover">
+                        <img src="imagenes/mouse_gamer.jpg" alt="Mouse Gamer">
+                        <div class="overlay">
+                            <p>Mouse con iluminación RGB</p>
+                        </div>
+                    </div>
+                    <h5>Mouse Gamer</h5>
+                    <p class="precio">$85.000</p>
+                    <button class="carrito-btn">Agregar al carrito</button>
+                </div>
+
+                <!-- Productos normales -->
+                <div class="producto">
+                    <div class="imagen-hover">
+                        <img src="imagenes/monitor.jpg" alt="Monitor">
+                        <div class="overlay">
+                            <p>Monitor FHD 24”</p>
+                        </div>
+                    </div>
+                    <h5>Monitor</h5>
+                    <p class="precio">$499.000</p>
+                    <button class="carrito-btn">Agregar al carrito</button>
+                </div>
+
+                <div class="producto">
+                    <div class="imagen-hover">
+                        <img src="imagenes/teclado.jpg" alt="Teclado">
+                        <div class="overlay">
+                            <p>Teclado mecánico retroiluminado</p>
+                        </div>
+                    </div>
+                    <h5>Teclado</h5>
+                    <p class="precio">$190.000</p>
+                    <button class="carrito-btn">Agregar al carrito</button>
+                </div>
+
+                <div class="producto">
+                    <div class="imagen-hover">
+                        <img src="imagenes/silla.jpg" alt="Silla">
+                        <div class="overlay">
+                            <p>Silla ergonómica gamer</p>
+                        </div>
+                    </div>
+                    <h5>Silla</h5>
+                    <p class="precio">$650.000</p>
+                    <button class="carrito-btn">Agregar al carrito</button>
+                </div>
+
+                <div class="producto">
+                    <div class="imagen-hover">
+                        <img src="imagenes/audifonos.jpg" alt="Audífonos">
+                        <div class="overlay">
+                            <p>Audífonos inalámbricos</p>
+                        </div>
+                    </div>
+                    <h5>Audífonos</h5>
+                    <p class="precio">$120.000</p>
+                    <button class="carrito-btn">Agregar al carrito</button>
+                </div>
+
+                <div class="producto">
+                    <div class="imagen-hover">
+                        <img src="imagenes/microfono.jpg" alt="Micrófono">
+                        <div class="overlay">
+                            <p>Micrófono condensador</p>
+                        </div>
+                    </div>
+                    <h5>Micrófono</h5>
+                    <p class="precio">$175.000</p>
+                    <button class="carrito-btn">Agregar al carrito</button>
+                </div>
+
+                <div class="producto">
+                    <div class="imagen-hover">
+                        <img src="imagenes/camara.jpg" alt="Cámara">
+                        <div class="overlay">
+                            <p>Cámara web HD</p>
+                        </div>
+                    </div>
+                    <h5>Cámara</h5>
+                    <p class="precio">$99.000</p>
+                    <button class="carrito-btn">Agregar al carrito</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="tienda-footer">
+            <p>&copy; 2025 TechZone. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <script>
+        function toggleModoOscuro() {
+            document.body.classList.toggle('modo-oscuro');
+        }
+
+        const slider = document.getElementById('precio');
+        const valorPrecio = document.getElementById('valor-precio');
+        slider.oninput = function() {
+            valorPrecio.textContent = `$${parseInt(this.value).toLocaleString()}`;
+        };
+    </script>
 </body>
 </html>

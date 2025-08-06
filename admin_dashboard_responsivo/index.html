@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">🌈 <span>AdminPanel</span></div>
+    <div class="search-container">
+      <input type="text" placeholder="Buscar..." />
+      <button>🔍</button>
+    </div>
+    <div class="header-icons">
+      <div class="icon notification">🔔<span class="badge">3</span></div>
+      <div class="profile">
+        <span>👤</span>
+        <span class="username">Juan Pérez</span>
+      </div>
+      <div class="hamburger" onclick="toggleSidebar()">☰</div>
+    </div>
+  </header>
+
+  <aside class="sidebar" id="sidebar">
+    <ul>
+      <li class="active">📊 Dashboard</li>
+      <li>👥 Usuarios</li>
+      <li>📦 Productos</li>
+      <li>💰 Ventas</li>
+      <li>📈 Reportes</li>
+      <li>⚙️ Configuración</li>
+    </ul>
+  </aside>
+
+  <main class="main">
+    <h2>Estadísticas Generales</h2>
+    <section class="cards">
+      <div class="card purple">
+        <div class="icon">👥</div>
+        <div class="stat">1,234</div>
+        <p>Usuarios Activos</p>
+        <span class="green">+12%</span>
+      </div>
+      <div class="card brown">
+        <div class="icon">📦</div>
+        <div class="stat">567</div>
+        <p>Productos</p>
+        <span class="green">+8%</span>
+      </div>
+      <div class="card gold">
+        <div class="icon">💰</div>
+        <div class="stat">€45,678</div>
+        <p>Ventas del Mes</p>
+        <span class="green">+23%</span>
+      </div>
+      <div class="card blue">
+        <div class="icon">📈</div>
+        <div class="stat">89%</div>
+        <p>Satisfacción</p>
+        <span class="red">-2%</span>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <div class="table-header">
+        <h3>Usuarios Recientes</h3>
+        <button class="add-user">Agregar Usuario</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th><th>Nombre</th><th>Email</th><th>Rol</th><th>Estado</th><th>Fecha Registro</th><th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001</td><td>Ana García</td><td>ana.garcia@email.com</td>
+            <td><span class="role admin">ADMIN</span></td><td><span class="status active">Activo</span></td><td>15/01/2024</td>
+            <td>✏️ 🗑️</td>
+          </tr>
+          <tr>
+            <td>002</td><td>Carlos López</td><td>carlos.lopez@email.com</td>
+            <td><span class="role user">USUARIO</span></td><td><span class="status active">Activo</span></td><td>12/01/2024</td>
+            <td>✏️ 🗑️</td>
+          </tr>
+          <tr>
+            <td>003</td><td>María Rodríguez</td><td>maria.rodriguez@email.com</td>
+            <td><span class="role mod">MODERADOR</span></td><td><span class="status inactive">Inactivo</span></td><td>10/01/2024</td>
+            <td>✏️ 🗑️</td>
+          </tr>
+          <tr>
+            <td>004</td><td>Pedro Martín</td><td>pedro.martin@email.com</td>
+            <td><span class="role user">USUARIO</span></td><td><span class="status active">Activo</span></td><td>08/01/2024</td>
+            <td>✏️ 🗑️</td>
+          </tr>
+          <tr>
+            <td>005</td><td>Laura Sánchez</td><td>laura.sanchez@email.com</td>
+            <td><span class="role user">USUARIO</span></td><td><span class="status active">Activo</span></td><td>05/01/2024</td>
+            <td>✏️ 🗑️</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
